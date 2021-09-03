@@ -20,7 +20,7 @@ const Home = () => {
       filteredTools()
     )
   }, [searchQuery, currCategory])
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
   // returns an object of tools
   const filteredTools = () => {
     const toolsByCategory = currCategory === "All"
