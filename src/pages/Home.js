@@ -106,7 +106,7 @@ const Home = () => {
                 {tool.makers.map(maker => (
                   <a href={`https://twitter.com/${maker.twitter}`} title={maker.twitter} target="_blank" rel="noreferrer">
                     <img
-                      alt={`${maker.twitter.toLowerCase()}'s picture`}
+                      alt={`${maker.twitter.toLowerCase()}'s pic`}
                       className="maker"
                       src={maker.img}
                       onError={handleNotFoundImage}
