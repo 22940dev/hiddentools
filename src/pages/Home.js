@@ -16,12 +16,8 @@ const Home = () => {
 
   // if searchQuery or currCategory changes, then update visibleTools
   useEffect(() => {
-    setVisibleTools(
-      filteredTools()
-    )
-  }, [searchQuery, currCategory])
-// eslint-disable-next-line react-hooks/exhaustive-deps
-  // returns an object of tools
+    
+      // returns an object of tools
   const filteredTools = () => {
     const toolsByCategory = currCategory === "All"
       ? tools // if all
@@ -32,6 +28,11 @@ const Home = () => {
       .filter(tool => ((tool.name + tool.desc + tool.pricing + tool.category).toLowerCase()).includes(searchQuery.toLowerCase()))
     return toolsBySearch;
   }
+    setVisibleTools(
+      filteredTools()
+    )
+  }, [searchQuery, currCategory])
+
 
   const changeSearch = (event) => {
     setSearchQuery(event.target.value)
